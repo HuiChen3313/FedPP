@@ -35,4 +35,4 @@ Running FedPP with different aggregation schemes.
 ```
 python main.py --aggerate_method FedEvent
 ```
-where aggerate_method can be selected from FedAvg, AggSigma, AggSigma2 and FedPP. 
+where aggerate_method can be selected from FedAvg, AggSigma, AggSigma2 and FedEvent. 
