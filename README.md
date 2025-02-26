@@ -35,18 +35,4 @@ Running FedPP with different aggregation schemes.
 ```
 python main.py --aggerate_method FedEvent
 ```
-where aggerate_method can be selected from FedAvg, AggSigma, AggSigma2 and FedEvent. 
-
-Running FedPP with/without bayesian parameter.
-```
-python main.py --is_bayesian_paramter 1
-```
-where is_bayesian_parameter can be selected from 0 and 1.
-
-Running FedPP with/without deep kernel function.
-```
-python main.py --Kernel_DPM_Type OneLayerMLP
-```
-where Kernel_DPM_Type can be selected from None and OneLayerMLP.
-
-Other hyper-parameters can be find at `main.py` file. 
+where aggerate_method can be selected from FedAvg, AggSigma, AggSigma2 and FedPP. 
