@@ -174,7 +174,7 @@ class FedNPP():
                 plt.plot(model_coor, self.users[domain_i].mm.detach()*sigma_f(f_pp_m.detach()), label = 'data')
 
             # plt.plot([data[domain_i].numpy(), data[domain_i].numpy()], [-0.1, 0.1], color='black')
-            plt.plot(model_coor, self.users[domain_i].mm.detach()*sigma_f(f_pp_m.detach()), label = 'FedEvent')
+            plt.plot(model_coor, self.users[domain_i].mm.detach()*sigma_f(f_pp_m.detach()), label = 'FedPP')
             # plt.plot(model_coor, pp_m.mm.detach()*sigma_f(f_pp_m.detach()), label = 'model')
             plt.legend()
 
