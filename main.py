@@ -18,8 +18,8 @@ if __name__ == "__main__":
 
     # Model Type FedNPP
     parser.add_argument('--Kernel_DPM_Type', type=str, default='OneLayerMLP', help = 'OneLayerMLP or None')
-    parser.add_argument('--is_bayesian_paramter', type=int, default=1, help = 'Is it a baysian paramter in FedEvent?')
-    parser.add_argument('--aggerate_method', type=str, default="FedEvent", choices = ['FedAvg', 'AggSigma', 'AggSigma2', 'FedEvent'])
+    parser.add_argument('--is_bayesian_paramter', type=int, default=1, help = 'Is it a baysian paramter in FedPP?')
+    parser.add_argument('--aggerate_method', type=str, default="FedPP", choices = ['FedAvg', 'AggSigma', 'AggSigma2', 'FedPP'])
 
     # federated learning setting
     parser.add_argument('--local_only', type=int, default=0, help = 'local_only')
