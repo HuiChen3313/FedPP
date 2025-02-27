@@ -71,7 +71,7 @@ class FedNPP():
             self.param_dict[name] /= self.args['clients_num']
 
         def update_aggerate_parameter():
-            if (self.args['aggerate_method'] == 'FedEvent'):
+            if (self.args['aggerate_method'] == 'FedPP'):
                 return (softplus_inverse(param).clone().detach())**2 + \
                             (one_client_param_dict[mu_name].clone().detach())**2 - \
                                 (self.param_dict[mu_name].clone().detach())**2
@@ -81,7 +81,7 @@ class FedNPP():
             if (self.args['aggerate_method'] == 'AggSigma'):
                 return (softplus_inverse(param).clone().detach())
 
-        # ['FedAvg', 'AggSigma', 'AggSigma2', 'FedEvent']
+        # ['FedAvg', 'AggSigma', 'AggSigma2', 'FedPP']
         if (self.args['aggerate_method'] != 'FedAvg'):
             for i in range(0,self.args['clients_num']):
                 one_client_param_dict = {}
@@ -98,7 +98,7 @@ class FedNPP():
             for name in self.param_dict.keys():
                 if (name in rho_name_list):
                     self.param_dict[name] /= self.args['clients_num']
-                    if (self.args['aggerate_method'] == 'AggSigma2' or self.args['aggerate_method'] == 'FedEvent'):
+                    if (self.args['aggerate_method'] == 'AggSigma2' or self.args['aggerate_method'] == 'FedPP'):
                         self.param_dict[name] = torch.sqrt(self.param_dict[name])
                     self.param_dict[name] = softplus_inverse(self.param_dict[name])
 
