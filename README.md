@@ -33,6 +33,6 @@ where dataset_type can be selected from amazon, conttime, retweet, stackoverflow
 
 Running FedPP with different aggregation schemes.
 ```
-python main.py --aggerate_method FedEvent
+python main.py --aggerate_method FedPP
 ```
-where aggerate_method can be selected from FedAvg, AggSigma, AggSigma2 and FedEvent. 
+where aggerate_method can be selected from FedAvg, AggSigma, AggSigma2 and FedPP. 
